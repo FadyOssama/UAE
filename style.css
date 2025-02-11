@@ -1,0 +1,969 @@
+:root {
+    --primary-color: #00a344;
+    --secondary-color: #f4b942;
+    --dark-bg: #1a1a1a;
+    --dark-surface: #2d2d2d;
+    --dark-text: #ffffff;
+    --gradient: linear-gradient(135deg, #f4b942 50%, #00a344 50%);
+    --shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* تنسيق الهيدر */
+header {
+    background: var(--gradient);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--dark-text);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* تنسيق المحتوى الرئيسي */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: var(--dark-surface);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* تنسيق الصورة الرئيسية */
+.main-image {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.main-image:hover img {
+    transform: scale(1.05);
+}
+
+/* تنسيق شبكة الإمارات */
+.emirates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.emirate-box {
+    background: var(--dark-surface);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.emirate-box:hover {
+    transform: translateY(-10px);
+}
+
+.emirate-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.emirate-box:hover img {
+    transform: scale(1.1);
+}
+
+.emirate-box .content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.emirate-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.emirate-box p {
+    color: var(--dark-text);
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* تنسيق قسم السياحة */
+.tourism-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.tourist-spot {
+    background: var(--dark-surface);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tourist-spot:hover {
+    transform: translateY(-10px);
+}
+
+.tourist-spot img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tourist-spot:hover img {
+    transform: scale(1.1);
+}
+
+.tourist-spot .content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.tourist-spot h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tourist-spot p {
+    color: var(--dark-text);
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* تنسيق نموذج الاتصال */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: var(--dark-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0,163,68,0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background: var(--gradient);
+    color: var(--dark-text);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* تنسيق التذييل */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-surface);
+    margin-top: 40px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+/* تأثيرات الحركة */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    .main-image img {
+        height: 300px;
+    }
+    
+    .emirates-grid,
+    .tourism-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .emirate-box,
+    .tourist-spot {
+        max-width: 100%;
+    }
+    
+    .emirate-box img,
+    .tourist-spot img {
+        height: 180px;
+    }
+    
+    .emirate-box h3,
+    .tourist-spot h3 {
+        font-size: 1.5em;
+    }
+    
+    .emirate-box p,
+    .tourist-spot p {
+        font-size: 1em;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}/* تنسيق حاوية اللوجو والعنوان */
+.logo-container {
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 1002;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px 15px;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+}
+
+/* تنسيق اللوجو */
+.logo {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* تنسيق العنوان */
+.site-title {
+    display: flex;
+    flex-direction: column;
+    color: var(--dark-text);
+}
+
+.site-title h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.site-title span {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* تأثير الظهور التدريجي */
+.logo-container {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .logo-container {
+        left: 10px;
+        top: 10px;
+        padding: 5px 10px;
+    }
+    
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .site-title h3 {
+        font-size: 0.9em;
+    }
+    
+    .site-title span {
+        font-size: 0.7em;
+    }
+    
+    header h1 {
+        margin-right: 200px; /* زيادة المسافة لاستيعاب العنوان */
+        font-size: 1.8em;
+    }
+}/* تنسيق العنوان الثابت */
+.fixed-title {
+    position: fixed;
+    right: 20px;
+    top: 5px;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.fixed-title h3 {
+    color: var(--dark-text);
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* تأثير الظهور التدريجي للعنوان */
+.fixed-title {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .fixed-title {
+        right: 10px;
+        top: 10px;
+    }
+    
+    .fixed-title h3 {
+        font-size: 1em;
+    }
+    
+    /* تعديل المسافات للمحتوى الآخر */
+    header h1 {
+        margin-top: 40px;
+    }
+}
+
+/* تعديل المحتوى الرئيسي لتجنب التداخل */
+main {
+    margin-top: 120px; /* زيادة المسافة قليلاً */
+}/* تنسيق قسم معلومات الإمارات */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.info-card {
+    background: var(--dark-surface);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.info-card p {
+    color: var(--dark-text);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* تحديث تنسيق المعالم السياحية */
+.tourism-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.tourist-spot {
+    position: relative;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.tourist-spot a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tourist-spot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tourist-spot:hover img {
+    transform: scale(1.1);
+}
+
+.tourist-spot .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.tourist-spot:hover .content {
+    transform: translateY(0);
+}
+
+.tourist-spot h3 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tourist-spot p {
+    color: var(--dark-text);
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .tourism-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .tourist-spot {
+        height: 300px;
+    }
+    
+    .tourist-spot .content {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+}
+
+/* تأثيرات إضافية */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسين الألوان والتباين */
+:root {
+    --primary-color: #00a344;
+    --secondary-color: #f4b942;
+    --dark-bg: #1a1a1a;
+    --dark-surface: #2d2d2d;
+    --dark-text: #ffffff;
+    --gradient: linear-gradient(135deg, #f4b942 0%, #00a344 100%);
+    --shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* تنسيق العناوين الرئيسية */
+section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 3px;
+}/* تحسينات للهواتف المحمولة مع الحفاظ على الحركات */
+@media (max-width: 768px) {
+    /* تحسين الهيدر */
+    header {
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* تعديل اللوجو والعناوين مع الحفاظ على الحركة */
+    .logo-container {
+        scale: 0.8;
+        top: 5px;
+        left: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .logo-container:hover {
+        transform: scale(1.1);
+    }
+
+    .fixed-title {
+        scale: 0.8;
+        top: 5px;
+        right: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .fixed-title:hover {
+        transform: scale(1.1);
+    }
+
+    /* تحسين القائمة مع إضافة حركات */
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 5px;
+        margin-top: 60px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 8px;
+        font-size: 0.9em;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+        transform: translateY(-3px);
+        background: var(--primary-color);
+    }
+
+    /* تحسين بطاقات المعلومات مع الحركات */
+    .info-card {
+        padding: 15px;
+        margin: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* تحسين عرض المعالم السياحية مع الحركات */
+    .tourist-spot {
+        height: 250px;
+        transition: transform 0.3s ease;
+    }
+
+    .tourist-spot:hover {
+        transform: translateY(-5px);
+    }
+
+    .tourist-spot img {
+        transition: transform 0.5s ease;
+    }
+
+    .tourist-spot:hover img {
+        transform: scale(1.1);
+    }
+
+    .tourist-spot .content {
+        padding: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    /* إضافة تأثيرات ظهور */
+    .fade-in {
+        animation: fadeInMobile 0.8s ease forwards;
+    }
+
+    @keyframes fadeInMobile {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* تأثير النبض للأزرار */
+    button {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    /* تأثير التلاشي للصور */
+    .tourist-spot::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .tourist-spot:hover::after {
+        opacity: 1;
+    }
+
+    /* تحسين نموذج الاتصال مع الحركات */
+    input, textarea {
+        transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+        transform: translateY(-2px);
+        border-color: var(--primary-color);
+    }
+
+    /* تأثير التحميل */
+    .loading {
+        animation: loading 1s infinite linear;
+    }
+
+    @keyframes loading {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* تحسينات للهواتف الصغيرة جداً مع الحفاظ على الحركات */
+@media (max-width: 375px) {
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .tourist-spot {
+        height: 200px;
+    }
+}
+
+/* تحسينات للهواتف في الوضع الأفقي */
+@media (max-height: 500px) and (orientation: landscape) {
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 40px;
+    }
+
+    .tourist-spot {
+        height: 180px;
+    }
+}/* تنسيق قسم معلومات الإمارات */
+#uae-details {
+    padding: 50px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.1)), rgba(0,0,0,0.8)),
+                url('path/to/uae-background.jpg') center/cover;
+}
+
+/* تنسيق بطاقات الإنجازات */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.achievement-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-card i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.achievement-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-card ul li {
+    margin: 10px 0;
+    padding-right: 20px;
+    position: relative;
+}
+
+.achievement-card ul li::before {
+    content: '•';
+    color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+}
+
+/* تنسيق الإحصائيات */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: scale(1.05);
+}
+
+/* تنسيق قسم الثقافة */
+.culture-section {
+    margin-top: 50px;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.culture-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-10px);
+}
+
+.culture-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.culture-card h4, .culture-card p {
+    padding: 15px;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 768px) {
+    .achievements-grid,
+    .stats-container,
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .achievement-card,
+    .stat-box,
+    .culture-card {
+        padding: 15px;
+    }
+}
